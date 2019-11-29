@@ -1,7 +1,87 @@
 <html>
 <body>
+    <!--
 <h2>Battle Goals</h2>
-<ul>
-    <li>Complete the scenario without saying "oh shit"
-    <li>Never be the last person to choose your cards/initiative
+    -->
+<ul class="goals">
+    <!--
+    <li><h3>Calm Under Fire</h3>Complete the scenario without saying "oh shit"</li>
+    <li><h3>Hurry</h3>Never be the last person to choose your cards/initiative</li>
+    -->
+
+    <li><img src="goals/img/Acrobatic.jpg"></li>
+    <li><img src="goals/img/Ambusher.jpg"></li>
+    <li><img src="goals/img/Assassin.jpg"></li>
+    <li><img src="goals/img/Assistant.jpg"></li>
+    <li><img src="goals/img/Bastion.jpg"></li>
+    <li><img src="goals/img/Contagious.jpg"></li>
+    <li><img src="goals/img/Covetous.jpg"></li>
+    <li><img src="goals/img/Cuddler.jpg"></li>
+    <li><img src="goals/img/Discerning.jpg"></li>
+    <li><img src="goals/img/Distracted.jpg"><li></li>
+    <li><img src="goals/img/Elitist.jpg"></li>
+    <li><img src="goals/img/Exterminator.jpg"></li>
+    <li><img src="goals/img/Fearful.jpg"></li>
+    <li><img src="goals/img/Feeble.jpg"></li>
+    <li><img src="goals/img/Feral.jpg"></li>
+    <li><img src="goals/img/Finisher.jpg"></li>
+    <li><img src="goals/img/Hesitant.jpg"></li>
+    <li><img src="goals/img/Hothead.jpg"></li>
+    <li><img src="goals/img/Instigator.jpg"></li>
+    <li><img src="goals/img/Insulting.jpg"></li>
+    <li><img src="goals/img/Limping.jpg"></li>
+    <li><img src="goals/img/Lucky.jpg"></li>
+    <li><img src="goals/img/Marksman.jpg"></li>
+    <li><img src="goals/img/Miser.jpg"></li>
+    <li><img src="goals/img/Mugger.jpg"></li>
+    <li><img src="goals/img/Multitasker.jpg"></li>
+    <li><img src="goals/img/Paranoid.jpg"></li>
+    <li><img src="goals/img/Peacemonger.jpg"></li>
+    <li><img src="goals/img/Perforated.jpg"></li>
+    <li><img src="goals/img/Pickpocket.jpg"></li>
+    <li><img src="goals/img/Pincushion.jpg"></li>
+    <li><img src="goals/img/Prosperous.jpg"></li>
+    <li><img src="goals/img/Ravager.jpg"></li>
+    <li><img src="goals/img/Recluse.jpg"></li>
+    <li><img src="goals/img/Reserved.jpg"></li>
+    <li><img src="goals/img/Restless.jpg"></li>
+    <li><img src="goals/img/Retaliator.jpg"></li>
+    <li><img src="goals/img/Ritualistic.jpg"></li>
+    <li><img src="goals/img/Scavenger.jpg"></li>
+    <li><img src="goals/img/Shadow.jpg"></li>
+    <li><img src="goals/img/Sharpshooter.jpg"></li>
+    <li><img src="goals/img/Slayer.jpg"></li>
+    <li><img src="goals/img/Sleepless.jpg"></li>
+    <li><img src="goals/img/Sober.jpg"></li>
+    <li><img src="goals/img/Sociable.jpg"></li>
+    <li><img src="goals/img/Specialized.jpg"></li>
+    <li><img src="goals/img/Stalwart.jpg"></li>
+    <li><img src="goals/img/Stubborn.jpg"></li>
+    <li><img src="goals/img/Thorough.jpg"></li>
+    <li><img src="goals/img/Untouchable.jpg"></li>
+    <li><img src="goals/img/Wasteful.jpg"></li>
+    <li><img src="goals/img/Winded.jpg"></li>
+
 </ul>
+    <!--
+        .goals li { display:none; width:296px;height:437px; }
+    -->
+
+    <style>
+        .goals li { display:none; }
+        .goals li.chosen { display:inline-block; zoom:.5; }
+    </style>
+
+    <script>
+        function choose() {
+            const goals = document.querySelectorAll('.goals li');
+            const first = Math.floor(Math.random() * goals.length);
+            const second = Math.floor(Math.random() * (goals.length - 1));
+            if ( first === second ){
+                second = goals.length -1;
+            }
+            goals[first].className = 'chosen';
+            goals[second].className = 'chosen';
+        };
+        choose();
+    </script>
